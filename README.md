@@ -45,6 +45,28 @@ In order to run these tests, use the following command while in the 'project fol
 ```
 $ nosetests
 ```
+### The test cases
+1. `def test_returns_list(self)`:   Tests that the function returns a list if input is positive integer
+	
+2. `def test_not_integer(self)`: Tests that the function raises a TypeError if input is not an integer
+			
+3. `def test_negative_input_return_none(self)`: Tests that the function returns None if input is a negative number
+		
+4. `def test_returns_correct_output_1(self)`: Tests that the function returns the correct output
+		
+5. `def test_returns_correct_output_for_2(self)`: Tests that the function returns [2] if input is 2
+		
+6. `def test_returns_correct_output_for_0(self)`: Tests that the function returns an empty list if input is zero
+	
+7. `def test_returns_correct_output_for_1(self)`: Tests that the function returns None if input is 1
+		
+8. `def test_not_input_exists_if_variable(self)`: Tests that the function raises a Name Error if input is undefined
+			
+9. `def test_input_string_raise_error(self)`: Tests that the function raises a TypeError if input is a string
+			
+10. `def test_input_float_raise_error(self)`: Tests that the function raises a TypeError if input is a float
+			
+11. `def test_input_list_raise_error(self)`: Tests that the function raises a TypeError if input is a list
 
 ## Asymptotic Analysis
 Below is the basic code used to generate the prime numbers from `0` to a given number `n`:

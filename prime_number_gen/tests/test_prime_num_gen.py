@@ -54,7 +54,6 @@ class TestPrimeNumberGen(unittest.TestCase):
 		with self.assertRaises(TypeError):
 			prime_num_gen([4,"yay"])
 		
-	
 		
 if __name__ == '__main__':
 	unittest.main()
