@@ -5,6 +5,12 @@ def prime_num_gen(n):
     Prime Numbers: A number with only two factors - one and itself
     """
     
+    if n < 0:
+        return None
+    elif n == 2:
+        return [2]
+    elif n ==1 or n == 0:
+        return []    
         
     try:
         prime_nums = [2] # initialize with 2 since n is greater than 2 thus far
