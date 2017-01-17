@@ -12,6 +12,13 @@ def prime_num_gen(n):
     elif n ==1 or n == 0:
         return []    
         
+    if isinstance(n, str):
+        raise TypeError
+    if isinstance(n, float):
+        raise TypeError
+    if isinstance(n, list):
+        raise TypeError
+        
     try:
         prime_nums = [2] # initialize with 2 since n is greater than 2 thus far
         for i in range(3,n+1):
@@ -29,9 +36,14 @@ def prime_num_gen(n):
     except TypeError as e:
         # n is not an integer
         raise(e)
+    except NameError as e:
+        # undefined variable
+        raise(e)
+        
     return prime_nums
     
-# print(prime_num_gen(20))
+if __name__ == '__main__':
+	print(prime_num_gen(20))
         
         
         

@@ -10,7 +10,7 @@ class TestPrimeNumberGen(unittest.TestCase):
 	
 	def test_not_integer(self):
 		with self.assertRaises(TypeError):
-			prime_num_gen("hello")
+			prime_num_gen({})
 			
 	def test_negative_input_return_none(self):
 		self.assertEqual(None, prime_num_gen(-3))
@@ -29,6 +29,24 @@ class TestPrimeNumberGen(unittest.TestCase):
 	def test_returns_correct_output_for_1(self):
 		# should return an empty list
 		self.assertEqual([], prime_num_gen(1))
+		
+	def test_not_input_exists_if_variable(self):
+		with self.assertRaises(NameError):
+			prime_num_gen(x_num)
+			
+	def test_input_string_raise_error(self):
+		with self.assertRaises(TypeError):
+			prime_num_gen("hello")
+			
+	def test_input_float_raise_error(self):
+		with self.assertRaises(TypeError):
+			prime_num_gen(3.4)
+			
+	def test_input_list_raise_error(self):
+		with self.assertRaises(TypeError):
+			prime_num_gen([4,"yay"])
+		
+	
 		
 if __name__ == '__main__':
 	unittest.main()
