@@ -5,7 +5,17 @@ def prime_num_gen(n):
     to n
     Prime Numbers: A number with only two factors - one and itself
     """
-    pass
+    if n < 0:
+        return "Hey"
+    
+    try:
+        for i in range(n):
+            pass
+        
+    except TypeError as e:
+        # n is not an integer
+        raise(e)
+    return []
         
         
         
