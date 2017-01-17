@@ -6,7 +6,7 @@ def prime_num_gen(n):
     Prime Numbers: A number with only two factors - one and itself
     """
     if n < 0:
-        return "Hey"
+        return None
     
     try:
         for i in range(n):
